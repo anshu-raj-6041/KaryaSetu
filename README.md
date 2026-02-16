@@ -38,7 +38,7 @@ A modern project management tool built with Next.js, Supabase, and Clerk. This f
 Clone the project
 
 ```bash
-git clone https://github.com/your-username/KaryaSetu.git
+git clone https://github.com/anshu-raj-6041/KaryaSetu.git
 ```
 
 Go to the project directory
