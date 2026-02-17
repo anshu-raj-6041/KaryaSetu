@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
 import { ArrowRight, Check, Zap, Star } from "lucide-react";
@@ -8,21 +7,23 @@ export default function Hero() {
   return (
     <section className="relative overflow-hidden">
       <div className="container mx-auto px-4 py-20 lg:py-32">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="space-y-8">
-            <div className="space-y-4">
+            <div className="space-y-6">
               <Badge
                 variant="secondary"
-                className="w-fit bg-blue-100 text-blue-700 border-blue-200"
+                className="w-fit bg-gray-800/60 text-gray-300 border-gray-700/50 backdrop-blur-sm px-4 py-1.5"
               >
-                <Star className="w-3 h-3 mr-1" />
+                <Star className="w-3.5 h-3.5 mr-1.5 fill-current" />
                 Trusted by 10,000+ teams
               </Badge>
-              <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 leading-tight">
+              <h1 className="text-5xl lg:text-7xl font-bold text-white leading-tight">
                 Organize your work with{" "}
-                <span className="text-blue-600">KaryaSetu</span>
+                <span className="text-white">
+                  Karya<span className="text-orange-500">Setu</span>
+                </span>
               </h1>
-              <p className="text-xl text-gray-600 leading-relaxed">
+              <p className="text-lg lg:text-xl text-gray-400 leading-relaxed max-w-xl">
                 The visual way to manage any project, workflow, or team. Move
                 work forward with boards, lists, and cards.
               </p>
@@ -32,7 +33,7 @@ export default function Hero() {
               <Link href="/sign-up">
                 <Button
                   size="lg"
-                  className="w-full sm:w-auto text-lg px-8 py-6 cursor-pointer"
+                  className="w-full sm:w-auto text-base font-semibold px-8 py-6 cursor-pointer bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white border-0 shadow-xl shadow-orange-500/30 hover:shadow-orange-500/40 transition-all rounded-lg"
                 >
                   Get Started Free
                   <ArrowRight className="ml-2 h-5 w-5" />
@@ -42,76 +43,76 @@ export default function Hero() {
                 <Button
                   variant="outline"
                   size="lg"
-                  className="w-full sm:w-auto text-lg px-8 py-6 cursor-pointer"
+                  className="w-full sm:w-auto text-base font-medium px-8 py-6 cursor-pointer border-gray-700/50 text-gray-300 hover:bg-gray-800/50 hover:text-white hover:border-gray-600 backdrop-blur-sm transition-all rounded-lg"
                 >
                   View Pricing
                 </Button>
               </Link>
             </div>
 
-            <div className="flex items-center space-x-6 text-sm text-gray-500">
+            <div className="flex flex-wrap items-center gap-6 text-sm text-gray-400">
               <div className="flex items-center">
-                <Check className="w-4 h-4 text-green-500 mr-2" />
-                Free forever
+                <Check className="w-4 h-4 text-green-400 mr-2" />
+                <span>Free forever</span>
               </div>
               <div className="flex items-center">
-                <Check className="w-4 h-4 text-green-500 mr-2" />
-                No credit card required
+                <Check className="w-4 h-4 text-green-400 mr-2" />
+                <span>No credit card required</span>
               </div>
               <div className="flex items-center">
-                <Check className="w-4 h-4 text-green-500 mr-2" />
-                Setup in minutes
+                <Check className="w-4 h-4 text-green-400 mr-2" />
+                <span>Setup in minutes</span>
               </div>
             </div>
           </div>
 
           <div className="relative">
-            <div className="bg-white rounded-2xl shadow-2xl p-8 border">
-              <div className="space-y-4">
+            <div className="bg-gray-900/80 backdrop-blur-xl rounded-2xl shadow-2xl p-6 lg:p-8 border border-gray-800/50">
+              <div className="space-y-6">
                 <div className="flex items-center justify-between">
-                  <h3 className="font-semibold text-gray-900">Project Board</h3>
+                  <h3 className="font-semibold text-lg text-white">Project Board</h3>
                   <div className="flex space-x-2">
-                    <div className="w-3 h-3 bg-red-400 rounded-full"></div>
-                    <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
-                    <div className="w-3 h-3 bg-green-400 rounded-full"></div>
+                    <div className="w-3 h-3 bg-red-500 rounded-full shadow-sm"></div>
+                    <div className="w-3 h-3 bg-yellow-500 rounded-full shadow-sm"></div>
+                    <div className="w-3 h-3 bg-green-500 rounded-full shadow-sm"></div>
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                  <div className="bg-gray-50 rounded-lg p-4">
-                    <h4 className="font-medium text-sm text-gray-700 mb-2">
+                  <div className="bg-gray-800/60 backdrop-blur-sm rounded-xl p-4 border border-gray-700/50">
+                    <h4 className="font-medium text-sm text-gray-400 mb-3">
                       To Do
                     </h4>
-                    <div className="space-y-2">
-                      <div className="bg-white p-3 rounded border text-sm">
+                    <div className="space-y-2.5">
+                      <div className="bg-gray-900/80 p-3 rounded-lg border border-gray-700/50 text-sm text-white hover:border-gray-600 transition-colors">
                         Design new logo
                       </div>
-                      <div className="bg-white p-3 rounded border text-sm">
+                      <div className="bg-gray-900/80 p-3 rounded-lg border border-gray-700/50 text-sm text-white hover:border-gray-600 transition-colors">
                         Update website
                       </div>
                     </div>
                   </div>
 
-                  <div className="bg-gray-50 rounded-lg p-4">
-                    <h4 className="font-medium text-sm text-gray-700 mb-2">
+                  <div className="bg-gray-800/60 backdrop-blur-sm rounded-xl p-4 border border-gray-700/50">
+                    <h4 className="font-medium text-sm text-gray-400 mb-3">
                       In Progress
                     </h4>
-                    <div className="space-y-2">
-                      <div className="bg-white p-3 rounded border text-sm truncate">
+                    <div className="space-y-2.5">
+                      <div className="bg-gray-900/80 p-3 rounded-lg border border-gray-700/50 text-sm text-white hover:border-gray-600 transition-colors truncate">
                         Write documentation
                       </div>
                     </div>
                   </div>
 
-                  <div className="bg-gray-50 rounded-lg p-4">
-                    <h4 className="font-medium text-sm text-gray-700 mb-2">
+                  <div className="bg-gray-800/60 backdrop-blur-sm rounded-xl p-4 border border-gray-700/50">
+                    <h4 className="font-medium text-sm text-gray-400 mb-3">
                       Done
                     </h4>
-                    <div className="space-y-2">
-                      <div className="bg-white p-3 rounded border text-sm">
+                    <div className="space-y-2.5">
+                      <div className="bg-gray-900/80 p-3 rounded-lg border border-gray-700/50 text-sm text-white hover:border-gray-600 transition-colors">
                         Setup project
                       </div>
-                      <div className="bg-white p-3 rounded border text-sm">
+                      <div className="bg-gray-900/80 p-3 rounded-lg border border-gray-700/50 text-sm text-white hover:border-gray-600 transition-colors">
                         Team meeting
                       </div>
                     </div>
@@ -121,10 +122,10 @@ export default function Hero() {
             </div>
 
             {/* Floating elements */}
-            <div className="absolute -top-4 -right-4 bg-blue-500 text-white p-3 rounded-full shadow-lg">
+            <div className="absolute -top-4 -right-4 bg-gradient-to-br from-blue-500 to-blue-600 text-white p-3 rounded-full shadow-lg shadow-blue-500/50 animate-bounce-slow">
               <Zap className="w-6 h-6" />
             </div>
-            <div className="absolute -bottom-4 -left-4 bg-green-500 text-white p-3 rounded-full shadow-lg">
+            <div className="absolute -bottom-4 -left-4 bg-gradient-to-br from-green-500 to-green-600 text-white p-3 rounded-full shadow-lg shadow-green-500/50 animate-bounce-slow">
               <Check className="w-6 h-6" />
             </div>
           </div>

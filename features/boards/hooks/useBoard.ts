@@ -7,7 +7,7 @@ import {
   taskService,
 } from "@/lib/services";
 import { Board, ColumnWithTasks, Task } from "@/lib/supabase/models";
-import { useSupabase } from "@/providers/SupabaseProvider";
+import { useSupabase } from "@/lib/supabase/SupabaseProvider";
 import { useUser } from "@clerk/nextjs";
 import { useEffect, useState } from "react";
 
@@ -53,11 +53,13 @@ export function useBoard(boardId: string) {
         updates
       );
       setBoard(updatedBoard);
+      setError(null);
       return updatedBoard;
     } catch (err) {
-      setError(
-        err instanceof Error ? err.message : "Failed to update the board."
-      );
+      const errorMessage =
+        err instanceof Error ? err.message : "Failed to update the board.";
+      setError(errorMessage);
+      throw err;
     }
   }
 

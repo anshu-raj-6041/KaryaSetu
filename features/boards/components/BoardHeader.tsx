@@ -24,7 +24,7 @@ export function BoardHeader({
   return (
     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-6 space-y-4 sm:space-y-0">
       <div className="flex flex-wrap items-center gap-4 sm:gap-6">
-        <div className="text-sm text-gray-600">
+        <div className="text-sm text-gray-300">
           <span className="font-medium">Total Tasks: </span>
           {totalTasks}
         </div>
@@ -32,13 +32,13 @@ export function BoardHeader({
       <div className="flex gap-2">
         <Button
           variant="outline"
-          className="text-gray-500 hover:text-gray-700 cursor-pointer"
+          className="text-gray-400 hover:text-white border-gray-700 hover:bg-gray-800/50 cursor-pointer"
           onClick={onCreateColumn}
         >
           <Plus />
           Add New List
         </Button>
-        <Button className="cursor-pointer w-auto" onClick={onCreateTask}>
+        <Button className="cursor-pointer w-auto bg-orange-500 hover:bg-orange-600" onClick={onCreateTask}>
           <Plus />
           Add Task
         </Button>

@@ -2,7 +2,7 @@
 
 import { boardDataService, boardService } from "@/lib/services";
 import { Board } from "@/lib/supabase/models";
-import { useSupabase } from "@/providers/SupabaseProvider";
+import { useSupabase } from "@/lib/supabase/SupabaseProvider";
 import { useUser } from "@clerk/nextjs";
 import { useEffect, useState } from "react";
 

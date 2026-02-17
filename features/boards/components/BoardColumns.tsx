@@ -35,7 +35,7 @@ export function BoardColumns({
   }
 
   return (
-    <div className="flex flex-col lg:flex-row lg:space-x-6 lg:overflow-x-auto lg:pb-6 lg:px-2 lg:-mx-2 lg:[&::-webkit-scrollbar]:h-2 lg:[&::-webkit-scrollbar-track]:bg-gray-100 lg:[&::-webkit-scrollbar-thumb]:bg-gray-300 lg:[&::-webkit-scrollbar-thumb]:rounded-full space-y-4 lg:space-y-0">
+    <div className="flex flex-col lg:flex-row lg:space-x-6 lg:overflow-x-auto lg:pb-6 lg:px-2 lg:-mx-2 lg:[&::-webkit-scrollbar]:h-2 lg:[&::-webkit-scrollbar-track]:bg-gray-800 lg:[&::-webkit-scrollbar-thumb]:bg-gray-600 lg:[&::-webkit-scrollbar-thumb]:rounded-full space-y-4 lg:space-y-0">
       {columns.map((column, key) => (
         <DroppableColumn
           key={key}
@@ -63,7 +63,7 @@ export function BoardColumns({
       <div className="w-full lg:flex-shrink-0 lg:w-80">
         <Button
           variant="outline"
-          className="w-full h-[130px] border-dashed border-2 text-gray-500 hover:text-gray-700 cursor-pointer"
+          className="w-full h-[130px] border-dashed border-2 border-gray-700 text-gray-400 hover:text-orange-400 hover:border-orange-500 cursor-pointer bg-gray-900/30 backdrop-blur-sm"
           onClick={onCreateColumn}
         >
           <Plus />

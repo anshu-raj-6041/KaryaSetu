@@ -4,10 +4,12 @@ import Feature from "./Feature";
 import Pricing from "./Pricing";
 import CallToAction from "./CallToAction";
 import Footer from "@/components/layout/Footer";
+import SpaceBackground from "@/components/common/SpaceBackground";
 
 export default function HomePagePartial() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
+    <div className="min-h-screen bg-[#0a0a14] relative">
+      <SpaceBackground />
       <Navbar />
       <Hero />
       <Feature />

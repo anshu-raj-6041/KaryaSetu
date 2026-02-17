@@ -92,7 +92,7 @@ export default function Dashboard() {
 
   if (error) {
     return (
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen bg-[#0a0a14]">
         <Navbar />
         <main className="container mx-auto px-4 py-6 sm:py-8">
           <ErrorState
@@ -107,7 +107,7 @@ export default function Dashboard() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-[#0a0a14]">
       <Navbar />
       <main className="container mx-auto px-4 py-6 sm:py-8">
         <DashboardHeader onCreateBoard={handleCreateBoard} loading={loading} />

@@ -35,21 +35,21 @@ export function DroppableColumn({
     <div
       ref={setNodeRef}
       className={`w-full lg:flex-shrink-0 lg:w-80 ${
-        isOver ? "bg-blue-50 rounded-lg" : ""
+        isOver ? "bg-orange-500/10 rounded-lg" : ""
       }`}
     >
       <div
-        className={`bg-white rounded-lg shadow-sm border ${
-          isOver ? "ring-2 ring-blue-300" : ""
+        className={`bg-gray-900/50 backdrop-blur-sm rounded-lg shadow-sm border border-gray-800 ${
+          isOver ? "ring-2 ring-orange-500/50" : ""
         }`}
       >
-        <div className="p-3 sm:p-4 border-b">
+        <div className="p-3 sm:p-4 border-b border-gray-800">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2 min-w-0">
-              <h3 className="font-semibold text-gray-900 text-sm sm:text-base truncate">
+              <h3 className="font-semibold text-white text-sm sm:text-base truncate">
                 {column.title}
               </h3>
-              <Badge variant="secondary" className="flex-shrink-0">
+              <Badge variant="secondary" className="flex-shrink-0 bg-gray-800 text-gray-300">
                 {column.tasks.length}
               </Badge>
             </div>
@@ -57,7 +57,7 @@ export function DroppableColumn({
               <Button
                 variant="ghost"
                 size="sm"
-                className="flex-shrink-0 cursor-pointer"
+                className="flex-shrink-0 cursor-pointer hover:bg-gray-800/50"
                 onClick={() => onDeleteColumn(column.id)}
               >
                 <Trash2 className="text-red-400" />
@@ -65,7 +65,7 @@ export function DroppableColumn({
               <Button
                 variant="ghost"
                 size="sm"
-                className="flex-shrink-0 cursor-pointer"
+                className="flex-shrink-0 cursor-pointer hover:bg-gray-800/50 text-gray-400 hover:text-white"
                 onClick={() => onEditColumn(column)}
               >
                 <MoreHorizontal />
@@ -78,7 +78,7 @@ export function DroppableColumn({
           <div className="w-full">
             <Button
               variant="ghost"
-              className="cursor-pointer w-full mt-3 text-gray-500 hover:text-gray-700"
+              className="cursor-pointer w-full mt-3 text-gray-400 hover:text-orange-400 hover:bg-gray-800/50"
               onClick={() => setIsCreatingTask(true)}
             >
               <Plus />

@@ -274,7 +274,7 @@ export default function Board() {
   if (error) {
     console.log(error);
     return (
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen bg-[#0a0a14]">
         <Navbar />
         <main className="container mx-auto px-2 py-4 sm:px-4 sm:py-6">
           <ErrorState
@@ -290,7 +290,7 @@ export default function Board() {
 
   return (
     <>
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen bg-[#0a0a14]">
         <Navbar
           boardTitle={board?.title}
           onEditBoard={() => {
