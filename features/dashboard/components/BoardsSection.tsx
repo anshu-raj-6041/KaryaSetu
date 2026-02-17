@@ -95,7 +95,6 @@ export function BoardsSection({
         </div>
       </div>
 
-      {/* Search Boards */}
       <div className="relative mb-6 sm:mb-8">
         <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
         <Input
@@ -107,7 +106,6 @@ export function BoardsSection({
         />
       </div>
 
-      {/* Boards Grids/List */}
       {boards.length === 0 ? (
         <div className="text-center py-16">
           <div className="w-16 h-16 bg-gray-800/50 rounded-2xl flex items-center justify-center mx-auto mb-4">

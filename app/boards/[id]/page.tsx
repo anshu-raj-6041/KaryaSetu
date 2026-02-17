@@ -38,7 +38,6 @@ export default function BoardPage() {
   const [newColor, setNewColor] = useState("bg-blue-500");
   const [isSaving, setIsSaving] = useState(false);
 
-  // Filter states
   const [isFilterOpen, setIsFilterOpen] = useState(false);
   const [filters, setFilters] = useState({
     priority: [] as string[],
@@ -46,13 +45,11 @@ export default function BoardPage() {
     dueDate: null as string | null,
   });
 
-  // Calculate active filter count
   const filterCount =
     filters.priority.length +
     filters.assignee.length +
     (filters.dueDate ? 1 : 0);
 
-  // Filter handlers
   const handleFilterChange = (
     type: "priority" | "assignee" | "dueDate",
     value: string | string[] | null
@@ -71,7 +68,6 @@ export default function BoardPage() {
     });
   };
 
-  // Update state when board data loads
   useEffect(() => {
     if (board) {
       setNewTitle(board.title);
@@ -122,7 +118,6 @@ export default function BoardPage() {
 
       <main className="container mx-auto px-4 py-6">
 
-        {/* Board content will go here */}
         <div className="bg-card rounded-lg border border-border shadow p-6">
           <p className="text-muted-foreground">Board content coming soon...</p>
         </div>
@@ -189,9 +184,7 @@ export default function BoardPage() {
         onFilterChange={handleFilterChange}
         onClearFilters={handleClearFilters}
       />
-      {/* Board Content */}
       <main className="container mx-auto px-2 sm:px-4 py-4 sm:py-6">
-        {/* Stats */}
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
           <div className="flex flex-wrap items-center gap-4 sm:gap-6">
             <div className="text-sm text-muted-foreground">
@@ -201,7 +194,6 @@ export default function BoardPage() {
           </div>
         </div>
 
-        {/* Add Task Dialog */}
         <Dialog>
           <DialogTrigger asChild>
             <Button className="w-full sm:w-auto">

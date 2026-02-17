@@ -60,7 +60,6 @@ export default function Navbar({ boardTitle, onEditBoard, onFilterClick, filterC
         <header className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-50">
             <div className="container mx-auto px-3 sm:px-4 flex items-center justify-between h-14">
 
-                {/* Left Section */}
                 <div className="flex items-center space-x-2 min-w-0">
 
                     {isBoardPage && (
@@ -88,7 +87,6 @@ export default function Navbar({ boardTitle, onEditBoard, onFilterClick, filterC
                     )}
                 </div>
 
-                {/* Right Section */}
                 <div className="flex items-center space-x-2">
                     {onEditBoard && (
                         <Button

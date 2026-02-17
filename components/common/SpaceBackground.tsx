@@ -12,7 +12,6 @@ export default function SpaceBackground() {
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
-    // Set canvas size
     const setCanvasSize = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
@@ -20,7 +19,6 @@ export default function SpaceBackground() {
     setCanvasSize();
     window.addEventListener('resize', setCanvasSize);
 
-    // Star particle class
     class Star {
       x: number;
       y: number;
@@ -53,13 +51,11 @@ export default function SpaceBackground() {
       }
     }
 
-    // Create stars
     const stars: Star[] = [];
     for (let i = 0; i < 200; i++) {
       stars.push(new Star());
     }
 
-    // Animation loop
     const animate = () => {
       ctx.fillStyle = 'rgba(10, 10, 20, 1)';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -86,16 +82,12 @@ export default function SpaceBackground() {
         className="fixed top-0 left-0 w-full h-full -z-10"
       />
       
-      {/* Large planet on the left */}
       <div className="fixed -left-64 top-1/4 w-[600px] h-[600px] -z-10 pointer-events-none">
         <div className="relative w-full h-full">
-          {/* Planet base */}
           <div className="absolute inset-0 rounded-full bg-gradient-to-br from-slate-800 via-slate-900 to-black opacity-90 shadow-2xl"></div>
           
-          {/* Planet glow */}
           <div className="absolute inset-0 rounded-full bg-gradient-to-br from-blue-500/20 via-transparent to-transparent blur-xl"></div>
           
-          {/* Dotted pattern overlay */}
           <div className="absolute inset-0 rounded-full overflow-hidden opacity-30">
             <div className="absolute inset-0" style={{
               backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.3) 1px, transparent 1px)',
@@ -103,12 +95,10 @@ export default function SpaceBackground() {
             }}></div>
           </div>
           
-          {/* Highlight */}
           <div className="absolute top-20 left-20 w-40 h-40 rounded-full bg-gradient-to-br from-white/10 to-transparent blur-2xl"></div>
         </div>
       </div>
 
-      {/* Floating crypto-like icons */}
       <div className="fixed top-32 left-32 w-16 h-16 -z-10 animate-float">
         <div className="w-full h-full rounded-full bg-gradient-to-br from-teal-400 to-teal-600 flex items-center justify-center shadow-lg shadow-teal-500/50">
           <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
@@ -133,7 +123,6 @@ export default function SpaceBackground() {
         </div>
       </div>
 
-      {/* Ambient light effects */}
       <div className="fixed top-0 right-0 w-[500px] h-[500px] bg-gradient-to-br from-blue-500/10 via-purple-500/5 to-transparent rounded-full blur-3xl -z-10"></div>
       <div className="fixed bottom-0 left-1/3 w-[400px] h-[400px] bg-gradient-to-tr from-orange-500/10 via-pink-500/5 to-transparent rounded-full blur-3xl -z-10"></div>
     </>

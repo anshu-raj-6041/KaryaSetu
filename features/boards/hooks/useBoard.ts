@@ -109,7 +109,6 @@ export function useBoard(boardId: string) {
       setColumns((prev) => {
         const newColumns = [...prev];
 
-        // Find and remove task from the old column
         let taskToMove: Task | null = null;
         for (const col of newColumns) {
           const taskIndex = col.tasks.findIndex((task) => task.id === taskId);
@@ -121,7 +120,6 @@ export function useBoard(boardId: string) {
         }
 
         if (taskToMove) {
-          // Add task to new column
           const targetColumn = newColumns.find((col) => col.id === newColumnId);
           if (targetColumn) {
             targetColumn.tasks.splice(newOrder, 0, taskToMove);
@@ -133,7 +131,6 @@ export function useBoard(boardId: string) {
       await taskService.moveTask(supabase!, taskId, newColumnId, newOrder);
     } catch (err) {
       setError(err instanceof Error ? err.message : "Failed to move task.");
-      // Rollback UI to previous state
       console.log("columns", columns);
       console.log("prev", prevColumns);
       setColumns(prevColumns);

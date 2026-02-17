@@ -121,7 +121,6 @@ export default function Hero() {
               </div>
             </div>
 
-            {/* Floating elements */}
             <div className="absolute -top-4 -right-4 bg-gradient-to-br from-blue-500 to-blue-600 text-white p-3 rounded-full shadow-lg shadow-blue-500/50 animate-bounce-slow">
               <Zap className="w-6 h-6" />
             </div>

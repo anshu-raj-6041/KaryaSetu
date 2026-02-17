@@ -33,7 +33,7 @@ export function BoardColumnsSkeleton() {
                     </Card>
                   )
                 )}
-                {/* Show tasks only on large screens */}
+
                 <div className="hidden lg:block">
                   {Array.from({ length: taskCounts[index] }).map(
                     (_, taskIndex) => (

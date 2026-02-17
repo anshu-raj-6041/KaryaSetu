@@ -20,13 +20,6 @@ export default function DashboardPage() {
     await createBoard({ title: "New Board" })
   }
 
-  // if (loading) {
-  //   return (
-  //     <div>
-  //       <Loader /><span>Loading your boards...</span>
-  //     </div>
-  //   );
-  // }
   if (error) {
     return (
       <div>
@@ -55,9 +48,7 @@ export default function DashboardPage() {
           <Plus className="h-4 w-4 mr-2" />
           Create Board
         </Button>
-        {/* Stats */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-6 sm:mb-8">
-          {/* 1 card */}
           <Card>
             <CardContent className="p-4 sm:p-6">
               <div className="flex items-center justify-between">
@@ -75,7 +66,6 @@ export default function DashboardPage() {
               </div>
             </CardContent>
           </Card>
-          {/* 2 card */}
           <Card>
             <CardContent className="p-4 sm:p-6">
               <div className="flex items-center justify-between">
@@ -120,7 +110,6 @@ export default function DashboardPage() {
               </div>
             </CardContent>
           </Card>
-          {/* 4 card */}
           <Card>
             <CardContent className="p-4 sm:p-6">
               <div className="flex items-center justify-between">
@@ -141,7 +130,6 @@ export default function DashboardPage() {
         </div>
 
 
-        {/* Boards */}
         <div className="mb-6 sm:mb-8">
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
             <h2 className="text-xl sm:text-2xl font-bold text-foreground">
@@ -183,7 +171,6 @@ export default function DashboardPage() {
         </div>
 
 
-        {/* Search Bar */}
         <div className="relative mb-4 sm:mb-6">
           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2" />
           <Input
@@ -193,7 +180,6 @@ export default function DashboardPage() {
           />
         </div>
 
-        {/* Boards Grid/List */}
         {boards.length === 0 ? (
           <div className="flex flex-col items-center justify-center py-12 text-center">
             <Trello className="h-16 w-16 text-muted-foreground mb-4" />
